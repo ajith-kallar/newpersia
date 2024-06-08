@@ -9,45 +9,71 @@ const navbarLinks = document.querySelectorAll("[data-nav-link]");
 const menuToggleBtn = document.querySelector("[data-menu-toggle-btn]");
 
 // Menu Buttons
-// Menu buttons
-const menuButtons = {
-  All: document.getElementById("All"),
-  Biriyani: document.getElementById("Biriyani"),
-  Beef: document.getElementById("Beef"),
-  Chicken: document.getElementById("Chicken"),
-  Currys: document.getElementById("Currys")
-};
+let menuAll = document.getElementById("All");
+let menuBiriyani = document.getElementById("Biriyani");
+let menuBeef = document.getElementById("Beef");
+let menuChicken = document.getElementById("Chicken");
+let menuCurrys = document.getElementById("Currys");
 
-// Menu display UL classes
-const displayElements = {
-  All: document.getElementById("DisplayAll"),
-  Biriyani: document.getElementById("DisplayBiriyani"),
-  Beef: document.getElementById("DisplayBeef"),
-  Chicken: document.getElementById("DisplayChicken"),
-  Currys: document.getElementById("DisplayCurrys")
-};
+//  Menu display Ul Class
+let DisplayAll = document.getElementById("DisplayAll");
+let DisplayBiriyani = document.getElementById("DisplayBiriyani");
+let DisplayBeef = document.getElementById("DisplayBeef");
+let DisplayChicken = document.getElementById("DisplayChicken");
+let DisplayCurrys = document.getElementById("DisplayCurrys");
 
-// Function to handle menu item click
-function handleMenuClick(menuItem) {
-  // Hide all display elements
-  Object.values(displayElements).forEach(element => {
-    element.style.display = "none";
-  });
-  
-  // Display the selected menu item
-  displayElements[menuItem].style.display = "";
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
 
-// Add event listeners for each menu button
-Object.values(menuButtons).forEach(button => {
-  button.addEventListener("click", () => {
-    handleMenuClick(button.id);
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      // Add active class to clicked button
+      button.classList.add("active");
+    });
   });
 });
 
-// Initialize by displaying all items
-handleMenuClick("All");
+menuBiriyani.addEventListener("click", () => {
+  DisplayBiriyani.style.display = "";
+  DisplayAll.style.display = "none";
+  DisplayChicken.style.display = "none";
+  DisplayBeef.style.display = "none";
+  DisplayCurrys.style.display = "none";
+});
 
+menuChicken.addEventListener("click", () => {
+  DisplayChicken.style.display = "";
+  DisplayAll.style.display = "none";
+  DisplayBiriyani.style.display = "none";
+  DisplayBeef.style.display = "none";
+  DisplayCurrys.style.display = "none";
+});
+
+menuBeef.addEventListener("click", () => {
+  DisplayBeef.style.display = "";
+  DisplayAll.style.display = "none";
+  DisplayBiriyani.style.display = "none";
+  DisplayChicken.style.display = "none";
+  DisplayCurrys.style.display = "none";
+});
+
+menuCurrys.addEventListener("click", () => {
+  DisplayCurrys.style.display = "";
+  DisplayAll.style.display = "none";
+  DisplayBiriyani.style.display = "none";
+  DisplayChicken.style.display = "none";
+  DisplayBeef.style.display = "none";
+});
+
+menuAll.addEventListener("click", () => {
+  DisplayAll.style.display = "";
+  DisplayBeef.style.display = "none";
+  DisplayBiriyani.style.display = "none";
+  DisplayChicken.style.display = "none";
+  DisplayCurrys.style.display = "none";
+});
 
 
 
