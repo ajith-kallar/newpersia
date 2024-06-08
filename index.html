@@ -45,7 +45,9 @@
     <div class="container">
 
       <h1>
-        <a href="#" class="logo">Rice Of Persia<span class="span">.</span></a>
+        <a href="#" class="logo">Rice Of Persia <span class="span">.</span></a>
+        <!-- <a href="#" class="logo"><img src="/assets/images/nnn-Photoroom.png" class="logo-img" alt="Rice of persia logo"></a> -->
+        <!-- <img src="/assets/images/nnn-Photoroom.png" class="logo-img logo " alt="Rice of persia logo"> -->
       </h1>
 
       <nav class="navbar" data-navbar>
@@ -416,30 +418,30 @@
           <ul class="fiter-list">
 
             <li>
-              <button class="filter-btn  active">All</button>
+              <button id="All" class="filter-btn  active">All</button>
             </li>
 
             <li>
-              <button class="filter-btn">Biriyani</button>
+              <button id="Biriyani" class="filter-btn ">Biriyani</button>
             </li>
 
             <li>
-              <button class="filter-btn">Beef</button>
+              <button id="Beef" class="filter-btn ">Beef</button>
             </li>
 
             <li>
-              <button class="filter-btn">Chicken</button>
+              <button id="Chicken" class="filter-btn ">Chicken</button>
             </li>
 
             <li>
-              <button class="filter-btn">Currys</button>
+              <button id="Currys" class="filter-btn">Currys</button>
             </li>
 
           </ul>
 
           <!-- All Menu -->
 
-          <ul class="food-menu-list"  >
+          <ul class="food-menu-list   " id="DisplayAll" >
 
             <li>
               <div class="food-menu-card">
@@ -678,7 +680,7 @@
           </ul>
 
           <!-- Beef Menu  -->
-          <ul class="food-menu-list" style="display: none;" >
+          <ul class="food-menu-list " id="DisplayBeef" style="display: none;" >
           
             <li>
               <div class="food-menu-card">
@@ -762,7 +764,7 @@
           </ul>
 
           <!-- Chicken Menu  -->
-          <ul class="food-menu-list" style="display: none;" >
+          <ul class="food-menu-list  hidden " id="DisplayChicken" style="display: none;" >
           
             <li>
               <div class="food-menu-card">
@@ -846,7 +848,7 @@
           </ul>
               
           <!-- Currys Menu  -->
-          <ul class="food-menu-list" style="display: none;">
+          <ul class="food-menu-list  hidden " id="DisplayCurrys" style="display: none;"  >
           
             <li>
               <div class="food-menu-card">
@@ -861,7 +863,7 @@
                 </div>
           
                 <div class="wrapper">
-                  <p class="category">Chicken</p>
+                  <p class="category">Currys</p>
           
                   <div class="rating-wrapper">
                     <ion-icon name="star"></ion-icon>
@@ -899,7 +901,7 @@
                 </div>
           
                 <div class="wrapper">
-                  <p class="category">Chicken</p>
+                  <p class="category">Currys</p>
           
                   <div class="rating-wrapper">
                     <ion-icon name="star"></ion-icon>
@@ -910,13 +912,13 @@
                   </div>
                 </div>
           
-                <h3 class="h3 card-title">Chicken Fry (Single piece) </h3>
+                <h3 class="h3 card-title">Beef Curry</h3>
           
                 <div class="price-wrapper">
           
                   <p class="price-text">Price:</p>
           
-                  <data class="price">₹100</data>
+                  <data class="price">₹360</data>
           
                   <del class="del" value="69.00">$69.00</del>
           
@@ -932,7 +934,7 @@
         
 
           <!-- Biriyani Menu  -->
-          <ul class="food-menu-list " style="display: none;" >
+          <ul class="food-menu-list hidden " id="DisplayBiriyani" style="display: none;" >
           
             <li>
               <div class="food-menu-card">
@@ -1751,13 +1753,6 @@
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
           </ul>
 
         </div>

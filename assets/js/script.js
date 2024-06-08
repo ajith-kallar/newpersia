@@ -1,6 +1,4 @@
-'use strict';
-
-
+"use strict";
 
 /**
  * navbar toggle
@@ -9,6 +7,53 @@
 const navbar = document.querySelector("[data-navbar]");
 const navbarLinks = document.querySelectorAll("[data-nav-link]");
 const menuToggleBtn = document.querySelector("[data-menu-toggle-btn]");
+
+// Menu Buttons
+// Menu buttons
+const menuButtons = {
+  All: document.getElementById("All"),
+  Biriyani: document.getElementById("Biriyani"),
+  Beef: document.getElementById("Beef"),
+  Chicken: document.getElementById("Chicken"),
+  Currys: document.getElementById("Currys")
+};
+
+// Menu display UL classes
+const displayElements = {
+  All: document.getElementById("DisplayAll"),
+  Biriyani: document.getElementById("DisplayBiriyani"),
+  Beef: document.getElementById("DisplayBeef"),
+  Chicken: document.getElementById("DisplayChicken"),
+  Currys: document.getElementById("DisplayCurrys")
+};
+
+// Function to handle menu item click
+function handleMenuClick(menuItem) {
+  // Hide all display elements
+  Object.values(displayElements).forEach(element => {
+    element.style.display = "none";
+  });
+  
+  // Display the selected menu item
+  displayElements[menuItem].style.display = "";
+}
+
+// Add event listeners for each menu button
+Object.values(menuButtons).forEach(button => {
+  button.addEventListener("click", () => {
+    handleMenuClick(button.id);
+  });
+});
+
+// Initialize by displaying all items
+handleMenuClick("All");
+
+
+
+
+
+
+
 
 menuToggleBtn.addEventListener("click", function () {
   navbar.classList.toggle("active");
@@ -21,8 +66,6 @@ for (let i = 0; i < navbarLinks.length; i++) {
     menuToggleBtn.classList.toggle("active");
   });
 }
-
-
 
 /**
  * header sticky & back to top
@@ -40,8 +83,6 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
-
-
 
 /**
  * search box toggle
@@ -61,8 +102,6 @@ window.addEventListener("scroll", function () {
 //   });
 // }
 
-
-
 /**
  * move cycle on scroll
  */
@@ -73,7 +112,6 @@ let deliveryBoyMove = -80;
 let lastScrollPos = 0;
 
 window.addEventListener("scroll", function () {
-
   let deliveryBoyTopPos = deliveryBoy.getBoundingClientRect().top;
 
   if (deliveryBoyTopPos < 500 && deliveryBoyTopPos > -250) {
@@ -88,5 +126,4 @@ window.addEventListener("scroll", function () {
     lastScrollPos = activeScrollPos;
     deliveryBoy.style.transform = `translateX(${deliveryBoyMove}px)`;
   }
-
 });
