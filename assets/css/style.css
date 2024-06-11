@@ -337,7 +337,7 @@ body.active { overflow: hidden; }
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 20px;
+  padding-block: 5px;
   border-block-end: 1px solid var(--champagne-pink_20);
   z-index: 4;
 }
@@ -347,7 +347,7 @@ body.active { overflow: hidden; }
   --btn-color: var(--rich-black-fogra-29);
 
   position: fixed;
-  top: -155px;
+  top: -130px;
   background-color: var(--white);
   box-shadow: var(--shadow-1);
   animation: slideIn 0.5s ease-out forwards;
