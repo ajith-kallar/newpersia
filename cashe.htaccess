@@ -1,0 +1,39 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # CSS and JS files
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+
+    # HTML files
+    ExpiresByType text/html "access plus 1 week"
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 week"
+    ExpiresByType image/png "access plus 1 week"
+    ExpiresByType image/gif "access plus 1 week"
+    ExpiresByType image/webp "access plus 1 week"
+    ExpiresByType image/svg+xml "access plus 1 week"
+    ExpiresByType image/x-icon "access plus 1 week"
+
+    # Fonts
+    ExpiresByType application/font-woff "access plus 1 week"
+    ExpiresByType application/font-woff2 "access plus 1 week"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 week"
+    ExpiresByType font/opentype "access plus 1 week"
+    ExpiresByType font/ttf "access plus 1 week"
+    ExpiresByType font/otf "access plus 1 week"
+
+    # Other media files
+    ExpiresByType video/mp4 "access plus 1 week"
+    ExpiresByType video/webm "access plus 1 week"
+    ExpiresByType audio/mpeg "access plus 1 week"
+    ExpiresByType audio/ogg "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|html|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|eot|ttf|otf|mp4|webm|mp3|ogg)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+</IfModule>
