@@ -2,7 +2,7 @@
 
   <h2 align="center">Rice of persia website</h2>
 
-Foodie is a fully responsive fast food website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
+Rice of persia website is a fully responsive cloud kitchen website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
 <a href=""><strong>➥ Live Demo</strong></a>
 
